@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useParams } from "next/navigation";
+import { useParams } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import CategoryDetail from "@/components/categories/CategoryDetail";
 

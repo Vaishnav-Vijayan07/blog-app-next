@@ -8,7 +8,7 @@ import {
   Linkedin,
   Mail,
 } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";

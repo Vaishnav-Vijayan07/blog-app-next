@@ -3,7 +3,7 @@ import BlogGrid from "./BlogGrid";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, PlusCircle } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 
 const BlogPage = () => {
   return (

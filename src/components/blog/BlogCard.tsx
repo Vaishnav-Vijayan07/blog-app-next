@@ -8,7 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { CalendarIcon, Clock, User } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 
 interface BlogCardProps {
   title: string;

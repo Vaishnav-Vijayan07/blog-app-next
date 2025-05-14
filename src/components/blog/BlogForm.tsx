@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -51,7 +51,7 @@ interface BlogFormProps {
 }
 
 const BlogForm = ({ categories = [] }: BlogFormProps) => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   // Default categories if none provided
@@ -107,7 +107,7 @@ const BlogForm = ({ categories = [] }: BlogFormProps) => {
           title: "Success!",
           description: "Your blog post has been created.",
         });
-        router.push(`/blog/${slug}`);
+        navigate(`/blog/${slug}`);
       } catch (error) {
         console.error("Error creating post:", error);
         toast({
@@ -247,7 +247,7 @@ const BlogForm = ({ categories = [] }: BlogFormProps) => {
               <Button
                 type="button"
                 variant="outline"
-                onClick={() => router.push("/blog")}
+                onClick={() => navigate("/blog")}
               >
                 Cancel
               </Button>

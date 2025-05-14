@@ -1,38 +1,88 @@
 import { Suspense, lazy } from "react";
-import { useRoutes, Routes, Route } from "react-router-dom";
-import Home from "./components/home";
-import routes from "tempo-routes";
+import { Routes, Route } from "react-router-dom";
 
-// Lazy load pages for better performance
-const BlogPage = lazy(() => import("./pages/blog"));
-const BlogPostPage = lazy(() => import("./pages/blog/[slug]"));
-const NewBlogPage = lazy(() => import("./pages/blog/new"));
-const CategoriesPage = lazy(() => import("./pages/categories"));
-const CategoryPage = lazy(() => import("./pages/categories/[slug]"));
-const AboutPage = lazy(() => import("./pages/about"));
-const ContactPage = lazy(() => import("./pages/contact"));
+// Import components
+import Layout from "./components/layout/Layout";
+import BlogPage from "./components/blog/BlogPage";
+import BlogPostDetail from "./components/blog/BlogPostDetail";
+import BlogForm from "./components/blog/BlogForm";
+import CategoriesPage from "./components/categories/CategoriesPage";
+import CategoryDetail from "./components/categories/CategoryDetail";
+import AboutPage from "./components/about/AboutPage";
+import ContactPage from "./components/contact/ContactPage";
 
 function App() {
   return (
     <Suspense fallback={<p>Loading...</p>}>
-      <>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/new" element={<NewBlogPage />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="/categories" element={<CategoriesPage />} />
-          <Route path="/categories/:slug" element={<CategoryPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <BlogPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <Layout>
+              <BlogPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/blog/new"
+          element={
+            <Layout>
+              <BlogForm />
+            </Layout>
+          }
+        />
+        <Route
+          path="/blog/:slug"
+          element={
+            <Layout>
+              <BlogPostDetail slug="" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/categories"
+          element={
+            <Layout>
+              <CategoriesPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/categories/:slug"
+          element={
+            <Layout>
+              <CategoryDetail slug="" />
+            </Layout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Layout>
+              <AboutPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <Layout>
+              <ContactPage />
+            </Layout>
+          }
+        />
 
-          {/* Add this before any catchall route */}
-          {import.meta.env.VITE_TEMPO === "true" && (
-            <Route path="/tempobook/*" />
-          )}
-        </Routes>
-        {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
-      </>
+        {/* Add this before any catchall route */}
+        {import.meta.env.VITE_TEMPO === "true" && <Route path="/tempobook/*" />}
+      </Routes>
     </Suspense>
   );
 }

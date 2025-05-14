@@ -5,7 +5,7 @@ import Layout from "@/components/layout/Layout";
 import BlogForm from "@/components/blog/BlogForm";
 import { categoriesApi } from "@/lib/api";
 import { ArrowLeft } from "lucide-react";
-import Link from "next/link";
+import Link from "@/components/ui/link";
 
 export default function NewBlogPage() {
   const [categories, setCategories] = useState([]);
