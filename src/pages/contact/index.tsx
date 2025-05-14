@@ -8,6 +8,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import SEO from "@/components/SEO";
 import {
   Form,
   FormControl,
@@ -50,6 +51,11 @@ const ContactPage = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Contact Us | BlogMaster"
+        description="Get in touch with the BlogMaster team. We'd love to hear from you!"
+        type="website"
+      />
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight mb-4">Contact Us</h1>

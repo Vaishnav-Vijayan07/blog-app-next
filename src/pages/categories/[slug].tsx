@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import BlogCard from "@/components/blog/BlogCard";
 import { Button } from "@/components/ui/button";
+import SEO from "@/components/SEO";
 
 interface CategoryPageProps {
   category?: {
@@ -151,6 +152,12 @@ const CategoryPage = ({ category, posts }: CategoryPageProps) => {
 
   return (
     <Layout>
+      <SEO
+        title={`${currentCategory.name} | BlogMaster Categories`}
+        description={currentCategory.description}
+        image={currentCategory.image}
+        type="website"
+      />
       <div className="w-full h-[300px] relative overflow-hidden">
         <img
           src={currentCategory.image}

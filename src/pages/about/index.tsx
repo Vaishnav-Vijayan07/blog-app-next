@@ -71,6 +71,11 @@ const AboutPage = () => {
 
   return (
     <Layout>
+      <SEO
+        title="About Us | BlogMaster"
+        description="Learn about the team behind BlogMaster and our mission to deliver high-quality content with exceptional user experience."
+        type="website"
+      />
       <div className="container mx-auto px-4 py-12">
         {/* Hero section */}
         <div className="text-center mb-16">

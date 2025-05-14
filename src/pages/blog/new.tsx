@@ -4,6 +4,7 @@ import BlogForm from "@/components/blog/BlogForm";
 import { categoriesApi } from "@/lib/api";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const NewBlogPage = () => {
   const [categories, setCategories] = useState([]);
@@ -30,6 +31,11 @@ const NewBlogPage = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Create New Blog Post | BlogMaster"
+        description="Create and publish a new blog post on BlogMaster."
+        type="website"
+      />
       <div className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <Link

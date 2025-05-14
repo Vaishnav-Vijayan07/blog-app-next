@@ -16,6 +16,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import BlogCard from "@/components/blog/BlogCard";
+import SEO from "@/components/SEO";
 
 interface BlogPostProps {
   post?: {
@@ -147,6 +148,12 @@ npx tailwindcss init -p</code></pre>
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={`${currentPost.title} | BlogMaster`}
+        description={currentPost.excerpt}
+        image={currentPost.featuredImage}
+        type="article"
+      />
       {/* Back button */}
       <div className="container mx-auto px-4 pt-8">
         <Link

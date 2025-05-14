@@ -5,10 +5,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search, PlusCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 const BlogPage = () => {
   return (
     <Layout>
+      <SEO
+        title="Blog Posts | BlogMaster"
+        description="Explore our latest articles and insights on web development, design, and technology."
+      />
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <div>
@@ -39,29 +44,6 @@ const BlogPage = () => {
                 </Button>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="mb-12">
-          <div className="flex overflow-x-auto pb-4 gap-2">
-            <Button variant="outline" className="rounded-full" size="sm">
-              All Posts
-            </Button>
-            <Button variant="outline" className="rounded-full" size="sm">
-              Development
-            </Button>
-            <Button variant="outline" className="rounded-full" size="sm">
-              Design
-            </Button>
-            <Button variant="outline" className="rounded-full" size="sm">
-              Technology
-            </Button>
-            <Button variant="outline" className="rounded-full" size="sm">
-              Business
-            </Button>
-            <Button variant="outline" className="rounded-full" size="sm">
-              Lifestyle
-            </Button>
           </div>
         </div>
 

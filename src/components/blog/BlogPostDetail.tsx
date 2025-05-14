@@ -105,7 +105,6 @@ npx tailwindcss init -p</code></pre>
       avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=jane",
       bio: "Senior Frontend Developer with 8+ years of experience building modern web applications.",
     },
-    categories: ["React", "Tailwind CSS", "Web Development"],
   };
 
   const defaultRelatedPosts = [
@@ -192,15 +191,6 @@ npx tailwindcss init -p</code></pre>
 
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-3xl mx-auto">
-          {/* Categories */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            {currentPost.categories.map((category, index) => (
-              <Badge key={index} variant="secondary">
-                {category}
-              </Badge>
-            ))}
-          </div>
-
           {/* Post title */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
             {currentPost.title}
@@ -295,7 +285,6 @@ npx tailwindcss init -p</code></pre>
                   imageUrl={relatedPost.featuredImage}
                   excerpt={relatedPost.excerpt}
                   author="Author"
-                  category="Category"
                 />
               ))}
             </div>

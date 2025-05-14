@@ -6,6 +6,29 @@ export const metadata: Metadata = {
   title: "BlogMaster - Modern Blog Platform",
   description:
     "A modern blog platform focused on delivering high-quality content with an exceptional user experience and SEO optimization.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://blogmaster.com",
+    siteName: "BlogMaster",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "BlogMaster",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@blogmaster",
+    creator: "@blogmaster",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 if (typeof window !== "undefined") {

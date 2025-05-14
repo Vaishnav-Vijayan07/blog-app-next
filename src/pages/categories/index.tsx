@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
 
 interface Category {
   name: string;
@@ -71,6 +72,11 @@ const CategoriesPage = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Categories | BlogMaster"
+        description="Browse our articles by topic to find the content that interests you most."
+        type="website"
+      />
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight mb-4">Categories</h1>

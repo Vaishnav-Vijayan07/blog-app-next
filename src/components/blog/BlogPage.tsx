@@ -38,29 +38,6 @@ const BlogPage = () => {
         </div>
       </div>
 
-      <div className="mb-12">
-        <div className="flex overflow-x-auto pb-4 gap-2">
-          <Button variant="outline" className="rounded-full" size="sm">
-            All Posts
-          </Button>
-          <Button variant="outline" className="rounded-full" size="sm">
-            Development
-          </Button>
-          <Button variant="outline" className="rounded-full" size="sm">
-            Design
-          </Button>
-          <Button variant="outline" className="rounded-full" size="sm">
-            Technology
-          </Button>
-          <Button variant="outline" className="rounded-full" size="sm">
-            Business
-          </Button>
-          <Button variant="outline" className="rounded-full" size="sm">
-            Lifestyle
-          </Button>
-        </div>
-      </div>
-
       <BlogGrid title="" description="" />
 
       <div className="flex justify-center mt-12">
